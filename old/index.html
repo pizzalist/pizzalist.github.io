@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Noah Lee</title>
+  <meta name="author" content="Noah Lee">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Noah Lee — AI Research Engineer & Scientist. MS student at Pukyong National University.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-size: 17px; line-height: 1.7; color: #333; background: #fff; }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+    .header { display: flex; gap: 40px; margin-bottom: 48px; align-items: flex-start; }
+    .header-text { flex: 1; }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+    .header .title { color: #555; font-size: 15px; margin-bottom: 12px; }
+    .header .affil { font-size: 14px; color: #444; margin-bottom: 14px; }
+    .header .links { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .header .links a { background: #f0f0f0; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #333; }
+    .header .links a:hover { background: #e0e8f8; color: #1772d0; text-decoration: none; }
+    .bio { font-size: 14.5px; color: #444; line-height: 1.7; }
+    .profile-pic-shell { position: relative; flex-shrink: 0; display: block; width: 150px; height: 150px; background: center / contain no-repeat url('../frame1_static.png'); }
+    .profile-pic-shell:hover { cursor: pointer; }
+    .profile-canvas { width: 100%; height: 100%; border-radius: 10px; image-rendering: pixelated; display: block; }
+    .section { margin-bottom: 48px; }
+    .section h2 { font-size: 20px; font-weight: 700; color: #111; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 24px; }
+    .pub { display: flex; gap: 20px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #f5f5f5; }
+    .pub:last-child { border-bottom: none; }
+    .pub-img { display: none; }
+    .pub-content { flex: 1; }
+    .pub-title { font-weight: 600; font-size: 15px; color: #111; margin-bottom: 4px; }
+    .pub-venue { font-size: 13px; color: #888; margin-bottom: 8px; font-style: italic; }
+    .badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-style: normal; font-weight: 600; margin-right: 6px; }
+    .badge-published { background: #e8f5e9; color: #2e7d32; }
+    .pub-links { display: flex; gap: 8px; }
+    .pub-links a { font-size: 12px; padding: 2px 10px; border: 1px solid #ccc; border-radius: 10px; color: #555; }
+    .pub-links a:hover { border-color: #1772d0; color: #1772d0; text-decoration: none; }
+    .award-list { list-style: none; }
+    .award-list li { display: flex; gap: 16px; margin-bottom: 12px; align-items: flex-start; }
+    .award-year { font-size: 13px; color: #888; min-width: 40px; font-weight: 600; padding-top: 2px; }
+    .award-content { font-size: 14.5px; }
+    .award-name { font-weight: 600; color: #111; }
+    .award-org { color: #666; font-size: 13px; }
+    .patent-list { list-style: none; }
+    .patent-list li { margin-bottom: 14px; font-size: 14.5px; }
+    .patent-list li::before { content: "📄 "; }
+    .patent-no { font-size: 12px; color: #888; }
+    .exp { margin-bottom: 20px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+    .exp-company { font-weight: 700; font-size: 15px; color: #111; }
+    .exp-period { font-size: 13px; color: #888; }
+    .exp-role { font-size: 13.5px; color: #1772d0; margin-bottom: 6px; }
+    .exp-desc { font-size: 13.5px; color: #555; padding-left: 16px; }
+    .exp-desc li { margin-bottom: 4px; }
+    .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .skill-item { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 14px; }
+    .skill-label { font-weight: 600; font-size: 13px; color: #333; margin-bottom: 4px; }
+    .skill-desc { font-size: 12.5px; color: #666; }
+    footer { text-align: center; padding: 32px 0; color: #aaa; font-size: 13px; border-top: 1px solid #f0f0f0; }
+    @media (max-width: 640px) {
+      .header { flex-direction: column-reverse; align-items: center; }
+      .profile-pic-shell { width: 120px; height: 120px; }
+      .pub { flex-direction: column; }
+      .pub-img { width: 100%; height: 120px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-text">
+      <h1>Noah Lee</h1>
+      <div class="title">AI Research Engineer &amp; Scientist</div>
+      <div class="affil">
+        MS Student · Dept. of Industrial &amp; Data Engineering<br>
+        Pukyong National University, Busan, Korea
+      </div>
+      <div class="links">
+        <a href="mailto:letgoofthepizza@gmail.com">✉ Email</a>
+        <a href="https://github.com/pizzalist" target="_blank">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=odDXbT4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/letgoofthepizza/" target="_blank">LinkedIn</a>
+        <a href="./portfolio/">Portfolio</a>
+      </div>
+      <p class="bio">
+        I am an MS student at <a href="https://www.pknu.ac.kr" target="_blank">Pukyong National University</a>,
+        focusing on <strong>multimodal AI</strong>, <strong>document understanding</strong>, and
+        <strong>LLM-based agent systems</strong>.
+        My work spans generative models (diffusion), information retrieval, and agentic AI architectures.
+        I am currently a graduate researcher at TEAMLAB, developing multi-agent systems
+        for scientific research automation.
+        <br><br>
+        I previously interned at <a href="https://home.genesislab.ai" target="_blank"><strong>Genesis Lab</strong></a>,
+        developing LLM-based HR AI services serving enterprise clients.
+      </p>
+    </div>
+    <div class="profile-pic-shell" id="profileAnimation">
+      <canvas class="profile-canvas" id="profileCanvas" width="160" height="160" aria-label="Noah Lee animated portrait"></canvas>
+    </div>
+  </div>
+
+  <!-- Papers -->
+  <div class="section">
+    <h2>Papers</h2>
+
+    <div class="pub">
+      <div class="pub-img">⚖️</div>
+      <div class="pub-content">
+        <div class="pub-title">T-RADAR: Simulating Trademark Examination as an Interactive Retrieval Interface for Conflict Risk Assessment</div>
+        <div class="pub-venue">
+          <span class="badge badge-published">Published</span>
+          <em>ACM SIGIR 2026</em> — Demonstration Papers Track
+        </div>
+        <div class="pub-links">
+          <a href="https://yongchoooon.github.io/tradar" target="_blank">demo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-img">🎨</div>
+      <div class="pub-content">
+        <div class="pub-title">KoDi: A Korean Diffusion Model for Bilingual Text-to-Image Generation and Cultural Fidelity</div>
+        <div class="pub-venue">
+          <span class="badge badge-published">Published</span>
+          <em>IEEE Access</em>, 2025
+        </div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/ACCESS.2025.3633798" target="_blank">paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-img">📄</div>
+      <div class="pub-content">
+        <div class="pub-title">Design Patent Prior-Art Retrieval for Pre-Screening Examiner Rejection Risk</div>
+        <div class="pub-venue">
+          <span class="badge" style="background:#fff3e0;color:#e65100;">Under Review</span>
+          2026
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-img">🖊️</div>
+      <div class="pub-content">
+        <div class="pub-title">Stamp Removal from Real Documents: A Diffusion-Based Approach with EA-RMSE Evaluation</div>
+        <div class="pub-venue">
+          <span class="badge badge-published">Published</span>
+          <em>Array (Elsevier)</em>, 2026
+        </div>
+        <div class="pub-links">
+          <a href="https://www.sciencedirect.com/science/article/pii/S2590005626001785" target="_blank">paper</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <h2>Experience</h2>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span><span class="exp-company">Tomocube, Inc.</span><span style="color:#555;font-weight:400;font-size:15px;">, Remote</span></span>
+        <span class="exp-period">2026.03 – Present</span>
+      </div>
+      <div class="exp-role">AI Team Intern</div>
+      <ul class="exp-desc">
+        <li>Building <strong>TIRA</strong>, an agent platform for research automation — orchestrator, knowledge graph &amp; hybrid retrieval, multi-agent meetings</li>
+        <li>Experience knowledge base and a pipeline that turns conversations into updated agent skills</li>
+      </ul>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span><span class="exp-company">TEAMLAB</span><span style="color:#555;font-weight:400;font-size:15px;">, Busan, Korea</span></span>
+        <span class="exp-period">2022.09 – Present</span>
+      </div>
+      <div class="exp-role">Undergraduate &amp; Graduate Researcher</div>
+      <ul class="exp-desc">
+        <li>Building an agentic AI system for research exploration &amp; ideation in holotomography imaging</li>
+        <li>Built <strong><a href="https://github.com/pizzalist/ClawHQ" target="_blank">ClawHQ</a></strong> — open-source AI team operating system where multi-agent teams brainstorm, debate, implement, and review like a real engineering team</li>
+        <li>Design patent prior-art retrieval using multi-view similarity learning</li>
+        <li>Korean image generation &amp; document restoration models (diffusion-based)</li>
+        <li>LLM-based news clipping automation and lecture description generation</li>
+        <li>Developed <em>Pukyounghurai</em>, a university-wide notification mobile app</li>
+      </ul>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <div>
+          <a href="https://home.genesislab.ai" target="_blank" class="exp-company">Genesis Lab, Inc.</a><span style="color:#555;font-weight:400;"> Seoul, Korea</span>
+        </div>
+        <span class="exp-period">2024.06 – 2024.12</span>
+      </div>
+      <div class="exp-role">AI Scientist Intern</div>
+      <ul class="exp-desc">
+        <li>Developed resume analysis &amp; evaluation AI service (<em>ViewinterHR</em>)</li>
+        <li>Built personalized interview question recommendation system using student records</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <h2>Education</h2>
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Pukyong National University</span>
+        <span class="exp-period">2025.03 – Present</span>
+      </div>
+      <div class="exp-role">M.S. in Industrial &amp; Data Engineering (in progress)</div>
+    </div>
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Pukyong National University</span>
+        <span class="exp-period">2019.03 – 2025.02</span>
+      </div>
+      <div class="exp-role">B.S. in Technology &amp; Data Engineering</div>
+    </div>
+  </div>
+
+  <!-- Honors & Awards -->
+  <div class="section">
+    <h2>Honors &amp; Awards</h2>
+    <ul class="award-list">
+      <li>
+        <span class="award-year">2025</span>
+        <div class="award-content">
+          <div class="award-name">Best Presentation Award</div>
+          <div class="award-org">Korean Society of CDE Winter Conference 2025</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div class="award-content">
+          <div class="award-name">Excellence Award — 4th X-Corps Plus Festival</div>
+          <div class="award-org">National Research Foundation of Korea</div>
+        </div>
+      </li>
+      <li>
+        <span class="award-year">2024</span>
+        <div class="award-content">
+          <div class="award-name">Outstanding Research Achievement Award</div>
+          <div class="award-org">College of Engineering, Pukyong National University</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Patents -->
+  <div class="section">
+    <h2>Patents</h2>
+    <ul class="patent-list">
+      <li>
+        <strong>Image Restoration Apparatus and Method for Removing Stamps in Documents</strong><br>
+        <span class="patent-no">Patent Application (KR), No. 10-2025-0154913 · 2025.10</span>
+      </li>
+      <li>
+        <strong>Method and Apparatus for Learning and Retrieving Similarity Between Multi-view Sets of Design Drawings</strong><br>
+        <span class="patent-no">Patent Application (KR), No. 10-2025-0170227 · 2025.11</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-item">
+        <div class="skill-label">🤖 AI Application Development</div>
+        <div class="skill-desc">LLM-based AI systems design and deployment</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">🎨 Multimodal AI</div>
+        <div class="skill-desc">Vision-language models, image generation &amp; retrieval</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">⚙️ LLM &amp; Prompt Engineering</div>
+        <div class="skill-desc">Structured prompt design, RAG, fine-tuning</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">🔧 Backend &amp; API</div>
+        <div class="skill-desc">FastAPI, RESTful APIs, AI service deployment</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">📊 Data Processing</div>
+        <div class="skill-desc">Large-scale dataset construction &amp; evaluation</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">💻 Stack</div>
+        <div class="skill-desc">Python · PyTorch · HuggingFace · Diffusers · LangChain · OpenCV</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Noah Lee · Still training · letgoofthepizza@gmail.com
+  </footer>
+
+</div>
+<script>
+  const shell = document.getElementById('profileAnimation');
+  const canvas = document.getElementById('profileCanvas');
+  const ctx = canvas.getContext('2d', { alpha: true });
+  const frameSources = [
+    '../frame1_static.png',
+    '../frame2_static.png',
+    '../frame3_static.png',
+    '../frame4_static.png',
+    '../frame5_static.png',
+    '../frame6_static.png'
+  ];
+  const frameTimings = [0, 200, 350, 500, 700, 900];
+  const animationTotalMs = 2800;
+  const loadedFrames = [];
+  let animationFrameId = null;
+  let playing = false;
+  let ready = false;
+
+  ctx.imageSmoothingEnabled = false;
+
+  function drawFrame(index) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(loadedFrames[index], 0, 0, canvas.width, canvas.height);
+  }
+
+  function frameIndexAt(elapsedMs) {
+    for (let i = frameTimings.length - 1; i >= 0; i -= 1) {
+      if (elapsedMs >= frameTimings[i]) return i;
+    }
+    return 0;
+  }
+
+  function stopProfileAnimation() {
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+    playing = false;
+    if (ready) drawFrame(0);
+  }
+
+  function playProfileAnimation(forceRestart = false) {
+    if (!ready) return;
+    if (playing && !forceRestart) return;
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+    playing = true;
+    const startedAt = performance.now();
+
+    function tick(now) {
+      const elapsed = now - startedAt;
+
+      if (elapsed >= animationTotalMs) {
+        stopProfileAnimation();
+        return;
+      }
+
+      drawFrame(frameIndexAt(elapsed));
+      animationFrameId = requestAnimationFrame(tick);
+    }
+
+    drawFrame(0);
+    animationFrameId = requestAnimationFrame(tick);
+  }
+
+  async function loadFrames() {
+    const images = await Promise.all(frameSources.map((src) => new Promise((resolve, reject) => {
+      const img = new Image();
+      img.decoding = 'sync';
+      img.onload = async () => {
+        try {
+          if (img.decode) await img.decode();
+        } catch (error) {
+          // Ignore decode errors and use the loaded image anyway.
+        }
+        resolve(img);
+      };
+      img.onerror = reject;
+      img.src = src;
+    })));
+
+    loadedFrames.push(...images);
+    ready = true;
+    drawFrame(0);
+    playProfileAnimation(true);
+  }
+
+  loadFrames();
+  shell.addEventListener('mouseenter', () => playProfileAnimation(false));
+  shell.addEventListener('click', () => playProfileAnimation(true));
+</script>
+</body>
+</html>
